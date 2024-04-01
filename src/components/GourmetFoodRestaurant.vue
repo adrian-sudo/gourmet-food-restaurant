@@ -34,11 +34,8 @@
       />
       <div :class="$style.textContentWrapper">
         <div :class="$style.textContent">
-          <b :class="$style.benefitHeading">Our Philosophy</b>
-          <div :class="$style.description">
-            At SavorEats, we blend traditional techniques with modern creativity
-            to delight your palate and create memorable dining experiences.
-          </div>
+          <b :class="$style.benefitHeading">Our Philosophy</b
+          ><DescriptionText />
         </div>
       </div>
     </div>
@@ -56,13 +53,13 @@
           featureTitle="Seasonal Menus"
           featureDescription="Fresh ingredients, dynamic flavors."
         /><Feature
-          iPhone14Starlight1="/iphone-14--starlight-1@2x.png"
-          screenContentLummi="/screen-content--lummi@2x.png"
+          iPhone14Starlight1="/iphone-14--starlight-11@2x.png"
+          screenContentLummi="/screen-content--lummi1@2x.png"
           featureTitle="Private Events"
           featureDescription="Host with us for any occasion."
         /><Feature
-          iPhone14Starlight1="/iphone-14--starlight-1@2x.png"
-          screenContentLummi="/screen-content--lummi@2x.png"
+          iPhone14Starlight1="/iphone-14--starlight-11@2x.png"
+          screenContentLummi="/screen-content--lummi2@2x.png"
           featureTitle="Culinary Mastery"
           featureDescription="Innovation in every dish served."
         />
@@ -93,12 +90,12 @@
             <img
               :class="$style.iphone14Starlight1"
               alt=""
-              src="/iphone-14--starlight-1@2x.png"
+              src="/iphone-14--starlight-12@2x.png"
             />
             <img
               :class="$style.screenContentLummi"
               alt=""
-              src="/screen-content--lummi@2x.png"
+              src="/screen-content--lummi3@2x.png"
             />
           </div>
           <img
@@ -133,7 +130,7 @@
         />
         <div :class="$style.plan">
           <div :class="$style.heading3">
-            <img :class="$style.iconIcon" alt="" src="/icon--icon.svg" />
+            <img :class="$style.iconIcon" alt="" src="/icon--icon1.svg" />
             <b :class="$style.title">Duo</b>
             <div :class="$style.shortDescription">
               Designed for couples dining
@@ -159,7 +156,7 @@
               <img
                 :class="$style.checkcircleIcon"
                 alt=""
-                src="/checkcircle--icon.svg"
+                src="/checkcircle--icon1.svg"
               />
               <div :class="$style.listItem">Chef's Special</div>
             </div>
@@ -167,7 +164,7 @@
               <img
                 :class="$style.checkcircleIcon1"
                 alt=""
-                src="/checkcircle--icon.svg"
+                src="/checkcircle--icon1.svg"
               />
               <div :class="$style.listItem1">Personal Waiter</div>
             </div>
@@ -175,7 +172,7 @@
               <img
                 :class="$style.checkcircleIcon2"
                 alt=""
-                src="/checkcircle--icon.svg"
+                src="/checkcircle--icon1.svg"
               />
               <div :class="$style.listItem2">Exclusive Menus</div>
             </div>
@@ -183,7 +180,7 @@
               <img
                 :class="$style.checkcircleIcon3"
                 alt=""
-                src="/checkcircle--icon.svg"
+                src="/checkcircle--icon1.svg"
               />
               <div :class="$style.listItem3">Valet Parking</div>
             </div>
@@ -218,7 +215,7 @@
       <div :class="$style.content">
         <div :class="$style.brand1">
           <div :class="$style.brand2">
-            <img :class="$style.icon" alt="" src="/icon.svg" />
+            <img :class="$style.icon" alt="" src="/icon1.svg" />
             <b :class="$style.brandname1">SavorEats</b>
           </div>
           <div :class="$style.brandname2">Taste the Exceptional</div>
@@ -254,12 +251,13 @@
 </template>
 <script lang="ts">
   import { defineComponent } from "vue";
+  import DescriptionText from "./DescriptionText.vue";
   import Feature from "./Feature.vue";
   import Plan from "./Plan.vue";
 
   export default defineComponent({
     name: "GourmetFoodRestaurant",
-    components: { Feature, Plan },
+    components: { DescriptionText, Feature, Plan },
   });
 </script>
 <style module>
@@ -409,14 +407,6 @@
     position: relative;
     line-height: 120%;
     display: inline-block;
-    flex-shrink: 0;
-    debug_commit: f6aba90;
-  }
-  .description {
-    align-self: stretch;
-    position: relative;
-    line-height: 120%;
-    color: var(--color-gray-100);
     flex-shrink: 0;
     debug_commit: f6aba90;
   }
@@ -1253,11 +1243,6 @@
       line-height: 38px;
     }
 
-    .description {
-      font-size: var(--font-size-13xl);
-      line-height: 38px;
-    }
-
     .heading {
       font-size: var(--font-size-22xl);
       line-height: 49px;
@@ -1378,11 +1363,6 @@
   }
   @media screen and (max-width: 450px) {
     .benefitHeading {
-      font-size: var(--font-size-5xl);
-      line-height: 29px;
-    }
-
-    .description {
       font-size: var(--font-size-5xl);
       line-height: 29px;
     }
